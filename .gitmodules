@@ -1,0 +1,4 @@
+[submodule "local-money"]
+	path = local-money
+	url = https://github.com/lucrampro/local-money
+	branch = master
