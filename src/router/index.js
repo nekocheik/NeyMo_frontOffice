@@ -1,15 +1,15 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Inscription from '@/views/Inscription.vue';
-import Home from '@/views/Home.vue';
+import Register from '@/views/Register.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home,
+    name: 'register',
+    component: Register,
   },
   {
     path: '/',
