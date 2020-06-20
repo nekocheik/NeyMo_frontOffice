@@ -13,7 +13,7 @@ const routes = [
     component: Register,
   },
   {
-    path: '/inscription/:id',
+    path: '/inscription/',
     name: 'inscription',
     component: Inscription,
     children: inscriptionChildren,

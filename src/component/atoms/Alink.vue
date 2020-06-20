@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'a-input',
+  name: 'a-link',
   computed: {
     placeholder() {
       console.warn();

@@ -24,7 +24,7 @@ extend('secret', {
 console.warn(Atoms, 'Atoms');
 Vue.component('a-input', Atoms.AInputText);
 Vue.component('a-button', Atoms.AButton);
-Vue.component('Alink', Atoms.Alink);
+Vue.component('a-link', Atoms.Alink);
 
 // Molecules
 console.warn(Modules, 'Modules');

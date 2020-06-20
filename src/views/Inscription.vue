@@ -6,7 +6,7 @@
       </div>
       <p class="pt-4 text-4xl font-semibold">Inscrivez-vous</p>
     </template>
-      <router-view></router-view>
+      <router-view />
     <template v-slot:bottom>
       <div class="flex flex-row-reverse">
         <a-button >Suviant</a-button>
