@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import {
   ValidationProvider, extend,
-  localize,
+  localize, ValidationObserver,
 } from 'vee-validate';
 
 import { required, email, min } from 'vee-validate/dist/rules';
@@ -30,19 +30,21 @@ extend('min', min);
 
 // Atoms
 console.warn(Atoms, 'Atoms');
-Vue.component('a-input', Atoms.AInputText);
 Vue.component('a-button', Atoms.AButton);
+Vue.component('a-radio', Atoms.ARadio);
 Vue.component('a-link', Atoms.Alink);
 
 // Molecules
 console.warn(Modules, 'Modules');
-
+Vue.component('m-input', Modules.MInputText);
 // Layouts
 console.warn(Layouts, 'Layouts');
 Vue.component('LRegitster', Layouts.LRegister);
 
 // global
 Vue.component('ValidationProvider', ValidationProvider);
+Vue.component('ValidationObserver', ValidationObserver);
+
 Vue.use(requestApi);
 
 new Vue({

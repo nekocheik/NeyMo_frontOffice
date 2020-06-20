@@ -12,9 +12,4 @@ requireModule.keys().forEach((filename) => {
   modules[moduleName] = requireModule(filename).default || requireModule(filename);
 });
 
-// import a-inputText from './a-inputText.vue';
-// import a-button from './a-button.vue';
-
-// export { a-inputText, a-button };
-
 export default modules;

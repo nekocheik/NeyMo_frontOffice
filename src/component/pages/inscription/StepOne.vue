@@ -1,6 +1,7 @@
 <template>
   <div>
-  dfsfdsfafsds
+    <a-radio/>
+    fsd
   </div>
 </template>
 

@@ -8,7 +8,7 @@
 
 <script>
 export default {
-  name: 'AInput',
+  name: 'MInput',
   data() {
     return {
       model: this.$attrs.value || '',
