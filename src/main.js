@@ -8,7 +8,7 @@ import './registerServiceWorker';
 import requestApi from '../../custom_modules/RequestApi';
 import Atoms from './component/atoms';
 import Modules from './component/molecules';
-import Layout from './component/layouts';
+import Layouts from './component/layouts';
 
 Vue.config.productionTip = false;
 
@@ -23,12 +23,14 @@ extend('secret', {
 // Atoms
 Vue.component('AInput', Atoms.AInputText);
 Vue.component('AButton', Atoms.AButton);
+Vue.component('Alink', Atoms.Alink);
 
 // Molecules
 console.warn(Modules);
 
 // Layouts
-console.warn(Modules);
+Vue.component('LRegitster', Layouts.LRegister);
+console.warn(Layouts);
 
 // global
 Vue.component('ValidationProvider', ValidationProvider);

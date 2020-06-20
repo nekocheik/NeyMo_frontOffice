@@ -2,13 +2,14 @@
   <input
     class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-teal-500 sm:mb-0"
     :placeholder="placeholder"
+    ty
     type="text"
   />
 </template>
 
 <script>
 export default {
-  name: 'AInput',
+  name: 'ACheckBox',
   computed: {
     placeholder() {
       console.warn();

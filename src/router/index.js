@@ -12,7 +12,7 @@ const routes = [
     component: Register,
   },
   {
-    path: '/',
+    path: '/inscription',
     name: 'inscription',
     component: Inscription,
   },

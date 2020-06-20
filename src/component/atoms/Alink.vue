@@ -1,9 +1,7 @@
 <template>
-  <input
-    class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-teal-500 sm:mb-0"
-    :placeholder="placeholder"
-    type="text"
-  />
+  <a class="mr-5 underline cursor-pointer hover:text-gray-900">
+    <slot name="default"></slot>
+  </a>
 </template>
 
 <script>

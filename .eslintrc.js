@@ -16,6 +16,7 @@ module.exports = {
     "class-methods-use-this" : "off",
     "import/named" : "off",
     "import/prefer-default-export" : "off",
+    "max-len" : "off",
     // "no-unused-vars" : "off",
 
     
