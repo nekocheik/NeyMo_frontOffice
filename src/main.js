@@ -1,5 +1,6 @@
 import Vue from 'vue';
-import { ValidationProvider, extend } from 'vee-validate';
+import { ValidationProvider, extend, localize } from 'vee-validate';
+import { required, email } from 'vee-validate/dist/rules';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -13,10 +14,8 @@ import Layouts from './component/layouts';
 Vue.config.productionTip = false;
 
 // Add a rule.
-extend('secret', {
-  validate: (value) => value === 'example',
-  message: 'This is not the magic word',
-});
+extend('email', email);
+extend('required', required);
 
 // Register it globally
 
