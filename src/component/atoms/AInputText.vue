@@ -1,14 +1,16 @@
 <template>
-  <input
-    class="flex-grow w-full px-4 py-2 mb-4 mr-4 text-base bg-gray-100 border border-gray-400 rounded focus:outline-none focus:border-teal-500 sm:mb-0"
-    :placeholder="placeholder"
-    type="text"
-  />
+<span>
+<span class="px-1 text-sm text-gray-600">{{placeholder}}</span>
+<input :placeholder="exemple" type="text" class="block w-full px-3 py-2 placeholder-gray-600 bg-white border-2 border-gray-300 rounded-lg shadow-md text-md focus:placeholder-gray-500 focus:bg-white focus:border-gray-600 focus:outline-none"> </div>
+</span>
 </template>
 
 <script>
 export default {
   name: 'AInput',
+  props: {
+    exemple: String,
+  },
   computed: {
     placeholder() {
       console.warn();

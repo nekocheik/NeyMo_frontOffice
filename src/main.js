@@ -21,16 +21,17 @@ extend('secret', {
 // Register it globally
 
 // Atoms
-Vue.component('AInput', Atoms.AInputText);
-Vue.component('AButton', Atoms.AButton);
+console.warn(Atoms, 'Atoms');
+Vue.component('a-input', Atoms.AInputText);
+Vue.component('a-button', Atoms.AButton);
 Vue.component('Alink', Atoms.Alink);
 
 // Molecules
-console.warn(Modules);
+console.warn(Modules, 'Modules');
 
 // Layouts
+console.warn(Layouts, 'Layouts');
 Vue.component('LRegitster', Layouts.LRegister);
-console.warn(Layouts);
 
 // global
 Vue.component('ValidationProvider', ValidationProvider);

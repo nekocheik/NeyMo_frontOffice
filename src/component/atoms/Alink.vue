@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'AInput',
+  name: 'a-input',
   computed: {
     placeholder() {
       console.warn();

@@ -2,6 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Inscription from '@/views/Inscription.vue';
 import Register from '@/views/Register.vue';
+import inscriptionChildren from './children/inscription';
 
 Vue.use(VueRouter);
 
@@ -12,9 +13,10 @@ const routes = [
     component: Register,
   },
   {
-    path: '/inscription',
+    path: '/inscription/:id',
     name: 'inscription',
     component: Inscription,
+    children: inscriptionChildren,
   },
 ];
 

@@ -2,22 +2,14 @@
   <LRegitster>
     <template v-slot:header>
       <div class="flex flex-row-reverse">
-        <AButton>Se connecter</AButton>
+        <a-button @click.native="$router.push({ name: 'register' })" >Se connecter</a-button>
       </div>
       <p class="pt-4 text-4xl font-semibold">Inscrivez-vous</p>
     </template>
-    <div class="mt-10">
-      <AInput>Téléphone, Email</AInput>
-      <AInput class="mt-4">Mot de passe</AInput>
-    </div>
-    <div>
-      <Alink class="block mx-auto mt-10 text-center">
-        Mot de passe oublié ?
-      </Alink>
-    </div>
+      <router-view></router-view>
     <template v-slot:bottom>
       <div class="flex flex-row-reverse">
-        <AButton >Valider</AButton>
+        <a-button >Suviant</a-button>
       </div>
     </template>
   </LRegitster>
