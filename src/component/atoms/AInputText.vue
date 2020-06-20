@@ -21,7 +21,7 @@ export default {
       default: '',
     },
     errors: {
-      type: Object,
+      default: [],
     },
     name: {
       type: String,

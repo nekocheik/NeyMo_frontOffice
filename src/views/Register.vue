@@ -12,8 +12,8 @@
           Email
         </a-input>
       </ValidationProvider>
-      <ValidationProvider name="mot de passe" rules="required|min_value:6" v-slot="{ errors }">
-        <a-input v-model="password" :errors="{ ...errors }" exemple="*********" class="mt-4">
+      <ValidationProvider name="mot de passe" rules="required|min:4" v-slot="{ errors }">
+        <a-input v-model="password" :errors="errors" exemple="*********" class="mt-4">
           Mot de passe
         </a-input>
       </ValidationProvider>

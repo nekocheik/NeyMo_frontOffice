@@ -1,6 +1,11 @@
 import Vue from 'vue';
-import { ValidationProvider, extend, localize } from 'vee-validate';
-import { required, email } from 'vee-validate/dist/rules';
+import {
+  ValidationProvider, extend,
+  localize,
+} from 'vee-validate';
+
+import { required, email, min } from 'vee-validate/dist/rules';
+import fr from 'vee-validate/dist/locale/fr.json';
 import App from './App.vue';
 import router from './router';
 import store from './store';
@@ -10,12 +15,16 @@ import requestApi from '../../custom_modules/RequestApi';
 import Atoms from './component/atoms';
 import Modules from './component/molecules';
 import Layouts from './component/layouts';
+import i18n from './i18n';
 
 Vue.config.productionTip = false;
+
+localize('fr', fr);
 
 // Add a rule.
 extend('email', email);
 extend('required', required);
+extend('min', min);
 
 // Register it globally
 
@@ -40,5 +49,6 @@ new Vue({
   requestApi,
   router,
   store,
+  i18n,
   render: (h) => h(App),
 }).$mount('#app');
