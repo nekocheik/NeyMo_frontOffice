@@ -6,7 +6,9 @@ import store from './store';
 import '@/assets/css/tailwind.css';
 import './registerServiceWorker';
 import requestApi from '../../custom_modules/RequestApi';
-import { InputText, Button } from './component/components';
+import Atoms from './component/atoms';
+import Modules from './component/molecules';
+import Layout from './component/layouts';
 
 Vue.config.productionTip = false;
 
@@ -17,8 +19,18 @@ extend('secret', {
 });
 
 // Register it globally
-Vue.component('AInput', InputText);
-Vue.component('AButton', Button);
+
+// Atoms
+Vue.component('AInput', Atoms.AInputText);
+Vue.component('AButton', Atoms.AButton);
+
+// Molecules
+console.warn(Modules);
+
+// Layouts
+console.warn(Modules);
+
+// global
 Vue.component('ValidationProvider', ValidationProvider);
 Vue.use(requestApi);
 
