@@ -23,10 +23,6 @@ export default {
     this.$watch(() => this.$refs.observer.flags.valid, (val) => { this.$emit('updateFormValid', val); });
   },
   watch: {
-    $refs: {
-      handler() { console.log('hit'); },
-      deep: true,
-    },
     model(oldVal, newVal) {
       this.$emit('input', newVal);
     },

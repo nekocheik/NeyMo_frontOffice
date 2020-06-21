@@ -16,6 +16,9 @@ export default {
   },
   props: {
     exemple: String,
+    mask: {
+      default: false,
+    },
     rules: {
       type: String,
       default: '',
@@ -37,7 +40,13 @@ export default {
     },
   },
   watch: {
-    model(oldVal, newVal) {
+    model(newVal, oldVal) {
+      if (newVal > oldVal) {
+        if (this.mask && this.mask[newVal.length] && this.mask[newVal.length] !== '#') {
+          console.log(this.mask, newVal.length, this.mask[newVal.length]);
+          this.model += this.mask[newVal.length];
+        }
+      }
       this.$emit('input', newVal);
     },
   },

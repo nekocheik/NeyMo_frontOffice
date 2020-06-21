@@ -12,8 +12,16 @@ export default [
     path: 'step-two',
     component: () => import('../../component/pages/inscription/StepTwo.vue'),
     meta: {
-      nextPath: 'inscription/step-tree',
+      nextPath: 'step-three',
       previousPath: 'step-one',
+    }
+  },
+  {
+    path: 'step-three',
+    component: () => import('../../component/pages/inscription/StepThree.vue'),
+    meta: {
+      nextPath: 'step-four',
+      previousPath: 'step-two',
     }
   },
 ];

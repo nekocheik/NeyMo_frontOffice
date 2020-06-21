@@ -1,30 +1,19 @@
 <template>
   <ValidationObserver ref="observer">
-    <div>
-      <ValidationProvider name="Nom" rules="required" v-slot="{ errors }">
-        <m-radio v-model="value" :inputs="mokeData" />
-        {{errors[0]}}
+    <div class="mt-10">
+      <ValidationProvider name="Nom" rules="required|min:3" v-slot="{ errors }">
+        <m-input :errors="errors" v-model="firstName" exemple="Uzumaki">Nom</m-input>
       </ValidationProvider>
     </div>
   </ValidationObserver>
 </template>
-
 <script>
 export default {
   name: 'StepOne',
   data() {
     return {
-      value: null,
-      mokeData: [
-        {
-          name: 'Entreprise',
-          value: 0,
-        },
-        {
-          name: 'Particulier',
-          value: 1,
-        },
-      ],
+      firstName: '',
+      lastName: '',
     };
   },
   mounted() {
@@ -35,9 +24,12 @@ export default {
       this.$emit('input', newVal);
     },
   },
+  computed: {
+    ObserverValid() {
+      return this.$refs.observer.flags.valid;
+    },
+  },
 };
 </script>
 
-<style lang="stylus" scoped>
-
-</style>
+<style lang="stylus" scoped></style>
