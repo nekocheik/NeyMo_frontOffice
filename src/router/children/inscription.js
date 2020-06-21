@@ -1,10 +1,20 @@
 /* eslint-disable */
-const layoutPath = '@/component/pages/inscription/';
 export default [
   {
     path: 'step-one',
     component: () => import('../../component/pages/inscription/StepOne.vue'),
-    nextPage: 'step-two',
+    meta: {
+      nextPath: 'step-two',
+      previousPath: '/',
+    }
+  },
+  {
+    path: 'step-two',
+    component: () => import('../../component/pages/inscription/StepTwo.vue'),
+    meta: {
+      nextPath: 'inscription/step-tree',
+      previousPath: 'step-one',
+    }
   },
 ];
 

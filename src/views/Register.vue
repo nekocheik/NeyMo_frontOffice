@@ -8,13 +8,13 @@
         <p class="pt-4 text-4xl font-semibold">Connectez-vous</p>
       </template>
       <div class="mt-10">
-        <ValidationProvider name="mail" rules="email" v-slot="{ errors }">
+        <ValidationProvider name="mail" rules="email|required" v-slot="{ errors }">
           <m-input :errors="errors" v-model="mail" exemple="marie.jane@mail.com">
             Email
           </m-input>
         </ValidationProvider>
         <ValidationProvider name="mot de passe" rules="required|min:6" v-slot="{ errors }">
-          <m-input v-model="password" :errors="errors" exemple="*********" class="mt-4">
+          <m-input type="password" v-model="password" :errors="errors" exemple="*********" class="mt-4">
             Mot de passe
           </m-input>
         </ValidationProvider>

@@ -29,7 +29,7 @@ export default {
     },
     maxlength: {
       type: String,
-      default: '20',
+      default: '50',
     },
     type: {
       type: String,
@@ -45,6 +45,7 @@ export default {
     placeholder() {
       return this.$slots.default && this.$slots.default[0] && this.$slots.default[0].text;
     },
+
   },
 };
 </script>
